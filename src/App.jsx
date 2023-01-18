@@ -2,6 +2,7 @@ import './App.css'
 import { useState, useEffect } from 'react';
 
 function App() {
+  const [success, setSuccess] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
