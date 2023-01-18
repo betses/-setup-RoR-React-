@@ -2,7 +2,6 @@ import './App.css'
 import { useState, useEffect } from 'react';
 
 function App() {
-  const [success, setSuccess] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -11,8 +10,8 @@ function App() {
       setSuccess(res);
     };
     fetchData();
-
   }, []);
+
   return (
     <div className="App">
       <h2>setup RoR + React project as two apps</h2>
