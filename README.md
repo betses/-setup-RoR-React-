@@ -24,8 +24,8 @@ After you're finished please remove all the comments and instructions!
 
 <div align="center">
   <br/>
-  <img src="https://user-images.githubusercontent.com/32224137/212936605-74a4084e-09a7-4ab5-938a-6edf05f55f44.png" alt="logo" width="140"  height="auto" />
-  <h3><b>setup RoR + React</b></h3>
+  <!-- <img src="" alt="logo" width="140"  height="auto" /> -->
+  <h1><b>setup RoR + React</b></h1>
 
 </div>
 
