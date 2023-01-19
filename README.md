@@ -61,17 +61,17 @@ After you're finished please remove all the comments and instructions!
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Understand the pros and cons of different approaches of connecting Ruby on Rails back-end with React front-end.
+> This is a projuct created to understand the pros and cons of different approaches of connecting Ruby on Rails back-end with React front-end.
 
 <details>
-  <summary>Client / Frontend</a></summary>
+  <summary><a href="https://github.com/betses/-setup-RoR-React-">Client / Frontend</a></summary>
   <ul>
     <li><a href="https://reactjs.org/">Reactjs</a></li>
   </ul>
 </details>
 
 <details>
-  <summary><a href="." >Server | Backend</summary>
+  <summary><a href="https://github.com/betses/setup-ror-backend" >Server | Backend</summary>
   <ul>
     <li><a href="https://rubyonrails.org/">Ruby on rails</a></li>
   </ul>
