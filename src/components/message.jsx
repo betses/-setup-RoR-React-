@@ -4,19 +4,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../redux/message';
 
 const Message = () => {
-  const message = useSelector((store) => store.message);
   const dispatch = useDispatch();
+  const message = useSelector((store) => store.message);
 
   console.log(message);
   useEffect(() => {
     dispatch(fetchData());
-  }, []);
+  }, [dispatch]);
 
   return (
-    <div>
-      <h3>Message page</h3>
-      <Link to="/">Home</Link>
-      <h1>{message.message}</h1>
+    <div className="flex flex-col justify-center items-center gap-10 h-screen text-white">
+      <h1 className="text-5xl">{message.message}</h1>
+      <Link to="/" className="bg-indigo-500 hover:bg-indigo-800 px-8   py-3 rounded-full">Back</Link>
     </div>
   );
 };
