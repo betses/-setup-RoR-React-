@@ -7,7 +7,6 @@ const Message = () => {
   const dispatch = useDispatch();
   const message = useSelector((store) => store.message);
 
-  console.log(message);
   useEffect(() => {
     dispatch(fetchData());
   }, [dispatch]);
