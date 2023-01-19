@@ -1,31 +1,17 @@
 import './App.css';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchData } from './redux/message';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import Home from './components/home';
+import Message from './components/message';
 
-function App() {
-  const message = useSelector((store) => store.message);
-  const dispatch = useDispatch();
-
-  console.log(message);
-  useEffect(() => {
-    dispatch(fetchData());
-  }, []);
-
-  return (
-    <div className="App">
-      <h2>setup RoR + React project as two apps</h2>
-      <div className="card">
-        <h3 className="read-the-docs">
-          &quot;
-          {' '}
-          {message.message}
-          {' '}
-          &quot; This message is displayed from backend API
-        </h3>
-      </div>
-    </div>
-  );
-}
+const App = () => (
+  <div className="w-full bg-[#242424] ">
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/message" element={<Message />} />
+      </Routes>
+    </BrowserRouter>
+  </div>
+);
 
 export default App;
