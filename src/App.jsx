@@ -1,16 +1,15 @@
-import './App.css'
-import { useState, useEffect } from 'react';
+import './App.css';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchData } from './redux/message';
 
 function App() {
-  const [success, setSuccess] = useState('');
+  const message = useSelector((store) => store.message);
+  const dispatch = useDispatch();
 
+  console.log(message);
   useEffect(() => {
-    const fetchData = async () => {
-      const getMessage = await fetch('http://localhost:3000/message');
-      const res = await getMessage.json();
-      setSuccess(res);
-    };
-    fetchData();
+    dispatch(fetchData());
   }, []);
 
   return (
@@ -18,11 +17,15 @@ function App() {
       <h2>setup RoR + React project as two apps</h2>
       <div className="card">
         <h3 className="read-the-docs">
-          " {success.message} " This message is displayed from backend API
+          &quot;
+          {' '}
+          {message.message}
+          {' '}
+          &quot; This message is displayed from backend API
         </h3>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
